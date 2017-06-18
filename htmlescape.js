@@ -6,6 +6,8 @@
 
 'use strict';
 
+var safeJSONStringify = require('safe-json-stringify')
+
 var ESCAPE_LOOKUP = {
   '&': '\\u0026',
   '>': '\\u003e',
@@ -21,7 +23,7 @@ function escaper(match) {
 }
 
 module.exports = function(obj) {
-  return JSON.stringify(obj).replace(ESCAPE_REGEX, escaper);
+  return safeJSONStringify(obj).replace(ESCAPE_REGEX, escaper);
 };
 
 /***/

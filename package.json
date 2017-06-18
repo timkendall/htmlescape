@@ -20,7 +20,9 @@
   "scripts": {
     "test": "tape test/*.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "safe-json-stringify": "^1.0.4"
+  },
   "devDependencies": {
     "tape": "^3.0.0"
   },
